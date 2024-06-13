@@ -1,0 +1,26 @@
+<!-- Width< Height of an Element -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <button id="btn" name = "form1" style="color: blue">Send</button>
+      
+      
+      <script>
+        let box = document.getElementById("box");
+
+        let width = box.offsetWidth;   // when used offsett border will be included
+        let height = box.offsetHeight;
+        let height2 = box.clientHeight; // when used client border is not included
+        console.log(height); // there will be 1px difference in both of these since border is exluded in the bottom code.
+        console.log(height2); 
+      </script>
+
+    </body>
+
+  </head>
+</html>

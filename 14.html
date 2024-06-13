@@ -1,0 +1,32 @@
+<!-- Change Inline Style -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <button id="btn" name = "form1" style="color: blue">Send</button>
+      
+      
+      <script>
+        let btn = document.getElementById("btn");
+        
+        btn.style.cssText = "background-color: red; color: white;"; // Inline styling of button
+       // this will remove already existing styling
+        // Another Method
+      //  btn.setAttribute('style' , 'color: white; background-color:red;');
+
+      //changing only one property in style
+      btn.style.background = "red";
+      // this will not remove already exisiting styling but we cannot set multiple things together
+
+      // for setting multiple things and retaining the existing styling
+      //use contatination
+      btn.cssText += 'background: red; border: 1px solid green';
+      </script>
+    </body>
+
+  </head>
+</html>

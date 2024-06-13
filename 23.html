@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    <style>
+      body{
+        height: 2000px; /* just to get scroll in the webpage*/
+      }
+    </style>
+    </head>
+    <body>
+     <h1>Hello</h1>
+      
+      <script>
+      // window.addEventListener('scroll', function(){
+      //   console.log("scrolling...");
+      // });
+      // window.addEventListener('wheel', function(){
+      //   if(event.deltaY < 0){  // deltaY is used as value to vertical scrolling
+      //                          // similarly deltaX is used as value to horizontal scrolling
+      //     console.log("scrolling up");
+      //   }
+      //   else if(event.deltaY > 0){
+      //     console.log("scrolling down");
+      //   }
+      // });
+
+      // how to detect that certain pixel distance is already scrolled through
+       window.addEventListener('scroll', function(){
+              if(window.pageYOffset > 150){  //pageYOffset has the value of distance scrolled
+                 document.body.style.background = "red";
+              }
+              else{
+                document.body.style.background = 'white';
+              }
+       });
+
+      </script>
+    </body>
+
+  </head>
+</html>

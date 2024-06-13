@@ -1,0 +1,30 @@
+<!-- Get Computed CSS -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+     <style>
+      #btn{
+        background-color: red;
+        color: white;
+      }
+     </style>
+    </head>
+    <body>
+      <button id="btn" name = "form1"  style ="color: blue">Send</button>
+      
+      
+      <script>
+        let btn = document.getElementById("btn");
+        
+        let css =getComputedStyle(btn);
+        console.log(css.color);  // this will give what is written in color property in the CSS
+        //internal css is given precedence over internal css
+      
+      </script>
+    </body>
+
+  </head>
+</html>

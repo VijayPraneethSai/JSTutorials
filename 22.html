@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+     <style>
+      #box{
+        height: 100px;
+        width: 100px;
+        background-color: blueviolet;
+      }
+     </style>
+    </head>
+    <body>
+     
+      <div id="box"></div>
+      
+      <script>
+        // using window object because we want to apply this function whenever there is an action noticed over the whole webpage not in a single elemnet or div 
+        window.addEventListener('keydown', checkKey); //keydown activates when the key is pressed
+                                                      // keyup can also be used that will activate when the pressed key is released
+
+        function checkKey(event){
+          console.log(event.key);
+        }  // we can also use if else for coding processes for certain key pressed
+
+
+      </script>
+    </body>
+
+  </head>
+</html>

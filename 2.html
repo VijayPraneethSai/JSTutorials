@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <ul>
+        <li class="cl">list 1</li>
+        <li id="first">list2</li>
+        <li class="cl">list 3</li>
+      </ul>
+
+      <script>
+      // accessing multiple objects at a time
+      let elm = document.getElementByClassName("cl");  // we can specify multiple classes also by giving space and writing the other classes like getElementByClassName("cl pi"). Then only objects which have all the specified classes will be selected
+
+      // elm.innerHTML = "<p> hello </p>" this will not work since now elm is an array of two list (list 1 and list 3 since they have the same class)
+      console.log(elm.length); // will give 2 as expected
+
+      for(let i = 0; i<elm.length; i++){
+        elm[i].innerHTML = "<p> hello </p>";
+      }
+       
+      </script>
+    </body>
+
+  </head>
+</html>

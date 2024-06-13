@@ -1,0 +1,48 @@
+<!-- Change Inline Style -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+     <style>
+      .color{
+           background-color: yellow;
+           color: red;
+      }
+      .dim{
+        border: 1px solid red;
+        padding: 100px;
+      }
+     </style>
+    </head>
+    <body>
+      <div id="box" class="color dim">
+        <p>This is dummy text</p>
+      </div>
+      
+      
+      <script>
+       let box =document.getElementById("box");
+      // console.log(box.className);
+       box.className += " dim"; //this will add dim class to box id element
+       console.log(box.classList); // will give an array of the css styling elemnets
+
+       for(let css of box.classList){
+        console.log(css);           // this loop will output the css elements one by one.
+       }
+
+       box.classList.add("dim1"); // adding classes
+       box.classList.remove("dim1"); // removing classes
+       boc.classList.replace("color","dim1"); // replaces color class with dim1
+       let res = box.classList.contains("color"); // return true of the class is present false is returned otherwise.
+       
+       box.classList.toggle(); // if the argument passed is present as a class it will remove it. if not present it will add it.
+       
+        
+
+      </script>
+    </body>
+
+  </head>
+</html>

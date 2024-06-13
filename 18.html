@@ -1,0 +1,42 @@
+<!-- DOM Events -->
+<!-- DOM events are actions that occur as a result of the user action or as result of state change of the elements of a DOM tree.
+how the webpage reacts to a user action??
+we can check list of DOM events in online. -->
+
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <!-- <button id="btn" onclick="btnClick()" >Click me!</button>  this is inline -->
+           <button id="btn"> CLick Me! </button>
+      
+      <script>
+        // function btnClick(){
+        //   alert("button was clicked!");
+        // }
+
+        let btn = document.getElementById("btn"); // using dom
+
+        // btn.addEventListener('click', btnClick)
+        //shortcut using anonymous functions without naming the function
+        btn.addEventListener('click', function(){
+          alert('button was clicked! ');
+        });
+        //putting multiple events
+
+        btn.addEventListener('mouseover', function(){
+          console.log('mouseover is activated');
+        });
+        btn.addEventListener('mouseout', function(){
+          console.log('mouseout is activated');
+        });
+
+      </script>
+    </body>
+
+  </head>
+</html>

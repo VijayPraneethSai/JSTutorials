@@ -1,0 +1,46 @@
+<!-- select an element by tag -->
+
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <ul>
+        <li>list 1</li>
+        <li id="first">list2</li>
+        <li>list 3</li>
+      </ul>
+      <h2>Heading 1</h2>
+      <div id="div1">
+        <p>Paragraph 1</p>
+        <h2>Heading 2</h2>
+        <p>Paragraph 2</p>
+        <h2>Heading 3</h2>
+        <p>Paragraph 3</p>
+      </div>
+
+      <script>
+      //  let elm =  document.getElementsByTagName("h2"); 
+      //  console.log(elm.length);  // elm is an array we can check the length here
+
+      // for(let i = 0; i< elm.length; i++){
+      //    elm[i].innerHTML = "hello"
+      // }
+      // Accessing multiple Elements
+      // we wan to change the h2 tags inside the div only
+
+      let div1 = document.getElementById("div1");  //selecting div1
+      let elm = div1.getElementsByTagName("h2");    //selecting h2 tags in div1 only 
+
+      for(let i = 0; i<elm.length; i++){
+        elm[i].innHTML = "hello"
+      }
+
+      </script>
+    </body>
+
+  </head>
+</html>

@@ -1,0 +1,33 @@
+<!-- Prevent Default -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+     <a href="https://www.google.com" id="anchor">Click Me</a>
+
+     <form action="" id="myForm">
+      <input type="text">
+      <input type="submit">
+     </form>
+
+      <script>
+        //if we want to the link to be activated only after double click and not single click then
+        
+        let link = document.getElementById("anchor");
+
+        link.addEventListener('click', function(e){  // can use any dummy variable here
+          console.log('link clicked...');
+          e.preventDefault(); // will prevent the link from opening on clicked (which is the dafault action).
+        })
+
+        let form = document.getElementById('myForm');
+
+        form.addEventListener('submit', function(e){
+        e.preventDefault();
+        })
+      </script>
+    </body>

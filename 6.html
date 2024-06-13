@@ -1,0 +1,44 @@
+<!-- create and append element -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <div class="into">
+        <p id="p1">Hello this is a p tag</p>
+      </div>
+      <script>
+      let elm = document.getElementById("intro");
+
+      
+      //creating and appending element
+      // appending means we want to add to the existing html we dont want to completely overwrite like innerHTML does.
+       let h1 = document.createElement('h1');
+
+      //  elm.appendChild(h1); // this will add a h1 tag inside the div.
+       
+      // adding class(es) and id to newly added element
+         h1.className = "try pi";  // adds two classes try and pi to h1 tag
+         h1.id = "intro1";  // give id intro1 to h1 tag. there can only be one id for an element
+       // adding to the newly appended h1 tag
+      //  let text = document.createTextNode("This is h1 tag");
+      //  h1.appendChild(text);
+      
+      //adding text using properties of objects
+      h1.textContent = "Content added";
+      // reading content
+      let pra = document.getElementById("p1");
+      console.log(pra.textContent); // gives the content of p1 id element.
+
+
+      //  elm.appendChild(h1);
+
+      documnent.body.appendChild(h1);  // adds h1 to body not div
+      </script>
+    </body>
+
+  </head>
+</html>

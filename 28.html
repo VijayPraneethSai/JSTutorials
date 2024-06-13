@@ -1,0 +1,40 @@
+<!-- window object -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <button id ="btn1">Google</button>
+      <button id ="btn2">Yahoo</button>
+      <button id ="btn3">Close</button>
+      
+      <script>
+        console.log(window.innerHeight); // this gives the display height not the total browser height
+        console.log(window.innerWidth);
+        console.log(window.outerHeight);
+        console.log(window.outerWidth);
+        
+        //Pop-up
+        
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+       let url ="https://www.google.com";
+        let features = "height = 500, width=500"; // these features will be set to the window that opens with the link
+       let win; // to make the win variable global since it is defined inside the function and it's scope will be local to that function.
+        // for more features search in google.
+        btn1.addEventListener('click', function(){
+           win = window.open(url, 'google', features);  // will open the button in a new window
+        });
+        btn2.addEventListener('click', function(){
+            window.open('https://www.yahoo.com', 'google');  // this will make yahoo to load in the same window that opened for google since we used google name in both eventlisteners
+       });
+       btn3.addEventListener('click', function(){
+            win.close();
+       });
+        
+      </script>
+    </body>

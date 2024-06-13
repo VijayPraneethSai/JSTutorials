@@ -1,0 +1,19 @@
+<!-- Browser Object Model -->
+ <!-- main object is 'window' -->
+
+ <!DOCTYPE html>
+ <html lang = "en">
+   <head>
+     <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+      <title>Document</title>
+     </head>
+     <body>
+      
+       </form>
+       <script>
+         var x = "hello";   // var variables can be used as properties to window object not const and let varibales. 
+         console.log(window.x); // this will work
+         console.log(x); // this will also work even though we dont use the windows object because the browser automatically understands that the window object is invoked
+       </script>
+     </body>

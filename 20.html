@@ -1,0 +1,35 @@
+<!-- page load -->
+ <!-- DOMContentLoaded - the browser fully loaded HTML and completed building the DOM tree. However, it hasn't loaded external resources like stylesheets adn images. In this event, you can start selecting DOM nodes or intialize the interface. -->
+  load - the browser fully loaded the HTML and also external resources like images and stylesheets.
+  When you leave the page, the following events fire in sequence:
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <img id = "image1" src="" alt="">
+      
+      <script>
+        
+        window.addEventListener('DOMContentLoaded', function(){
+          console.log("DOM tree created");
+        });
+
+        window.addEventListener('load', function(){
+          console.log("Fiully Loaded");  // this will come after loaded all html elements including the image and CSS elements
+        });
+
+       let img = document.getElementById("image1");
+
+       img.addEventListener('load', function(){
+        console.log("Fully Loaded") // this will come only after the image is comletey loaded
+       });
+       
+      </script>
+    </body>
+
+  </head>
+</html>

@@ -1,0 +1,38 @@
+<!-- Time Out -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+    <button id="btn">clear Interval</button>
+      <script>
+       let timeoutId = setTimeout(myFunction, 5000); // 5000 ms = 5 sec
+        // using variable to store the id.
+        function myFunction(){
+          alert("Hello");
+        }
+       
+        // if(/*some conditon*/){
+        // clearTimeout(timeoutId);
+        // }
+
+        //interval
+
+        var t1 = setInterval(fun, 2000); // for every two seconds it will execute fun
+
+        function fun(){
+          console.log("Hello2");
+        }
+
+        let btn1 = document.getElementById("btn");
+
+        btn1.addEventListener('click', function(){
+             clearInterval(t1);
+        });
+
+
+      </script>
+    </body>

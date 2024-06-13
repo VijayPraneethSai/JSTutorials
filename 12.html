@@ -1,0 +1,27 @@
+<!-- Insert Adjacent HTML -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <!-- beforebegin-->
+      <div class="intro"> <!-- selected -->
+        <!-- afterbegin -->
+        <h2>Heading</h2>
+        <p>This is a p tag</p>
+        <!-- beforeend-->
+      </div>
+      <!-- afterend-->
+      
+      <script>
+       let elm = document.getElementById("intro");
+       let html = "<h1> New h1 </h1>"
+       elm.insertAdjacentHTML('afterbegin', html); // postions are mentioned in the HTML code in the comments.
+      </script>
+    </body>
+
+  </head>
+</html>

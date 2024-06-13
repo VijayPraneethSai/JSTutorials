@@ -1,0 +1,27 @@
+<!-- Location Objects -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <button id="btn" onclick="fun()">Redirect to Google</button>
+      
+      </form>
+      <script>
+       console.log(window.location.href); //writing window is optional
+       console.log(location.pathname); // pathname wil give url without protocol 
+       console.log(location.protocol); // will give protocol
+
+       // to redirect
+       function fun(){
+               window.location ="https://www.google.com";
+              // location.href ="https://www.google.com"; can use this also
+              // location.assign("https://www.google.com") can use this also this will give entry in history
+              // location.replace(""); this will not enter in history.
+                //  location.reload(); to reload page
+              }
+      </script>
+    </body>

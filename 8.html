@@ -1,0 +1,50 @@
+<!-- create and append element in specific positons -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+
+      <ul id = "list">
+        <!-- 0 -->
+        <li>List 1</li>
+        <!-- 2 -->
+        <li>List 3</li>
+        <!-- 3 -->
+        <li>List 4</li>
+        <!-- 5 -->
+
+      </ul>
+      
+      <script>
+        let list1 = document.getElementById("list");
+
+        let item = document.createElement("li")
+        item.textContent ="New List 5";
+        
+        // // let pos = list1.firstElementChild;
+
+        // //list1.insertBefore(item, pos); // this will add the value in item variable before the pos specified (will come on top of list 1)
+          
+        // let pos = list1.firstElementChild.nextElementsibling; // this will select the position of list 2
+        // list1.insertBefore(item, pos); // this will add item in between list 1 and list 2
+        //  // can continue write .nextSibling into the pos variable to selcet any pos within the list to add element before that position in the list.
+
+        // adding element inside the body before the list.
+
+        let parent = document.body;
+        let elm = document.createElement("h2");
+        
+        elm.textContent = "This is new element";
+
+        let list = document.getElementById("list");
+
+        parent.insertBefore(elm, list);
+      </script>
+    </body>
+
+  </head>
+</html>

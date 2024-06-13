@@ -1,0 +1,33 @@
+<!-- Change Attribute-->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <button id="btn">Send</button>
+      
+      
+      <script>
+        let btn = document.getElementById("btn");
+
+        btn.setAttribute("name", "form 1"); // a new attribute name with value form 1 is added (name="form 1";)
+        // we can also add class since that is also an attribute
+
+        // How to know the value of an attribute?
+
+        let val = btn.getAttribute("name");
+        console.log(val);
+
+        // Remove Attribute 
+        let val2 = removeAttribute("name"); // will remove name attribute from btn
+
+        let val3 = btn.hasAttribute("name");
+        console.log(val); // will return false since we removed the name attribute. It the entered attribute is present hasAttribute method will return true.
+      </script>
+    </body>
+
+  </head>
+</html>

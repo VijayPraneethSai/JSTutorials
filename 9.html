@@ -1,0 +1,28 @@
+<!-- Remove Child Element -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <ul class="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About Us</li>
+      </ul>
+      
+      
+      <script>
+        let parent = document.getElementById("menu");
+        let elm = parent.firstElementChild.nextElementSibling;
+        
+      //  parent.remoceChild(elm); // will remove product from the list
+
+      document.bosy.remmoveChild(parent); // will remove the entire list.
+      </script>
+    </body>
+
+  </head>
+</html>

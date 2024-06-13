@@ -1,0 +1,31 @@
+<!-- Clone or Copy Element -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <ul class="menu">
+        <li>Home</li>
+        <li>Services</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      
+      
+      <script>
+        let menu = document.getElementById("menu");
+        let cloneElm = menu.cloneNode(true); // will copy the list inside the variable cloneElm
+        // if we pass true then the parent and child element all are copies but when we write false only the parent element is copied.
+        console.log(cloneElm);
+        //changing the id of copied list 
+        cloneElm.id="mobile-menu";
+        // appending to HTML
+        documnent.body.appendChild(cloneElm);  
+      </script>
+    </body>
+
+  </head>
+</html>

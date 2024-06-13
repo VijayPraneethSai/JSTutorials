@@ -1,0 +1,38 @@
+<!-- Input Events -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, intial-scale=1.0" >
+     <title>Document</title>
+    </head>
+    <body>
+      <form action="">
+        <input type="text" id ="myInput">
+        <!-- when user puts a cursor in the form then this status is called focus. if we deselect the form by clicking elsewhere on the webpage then the event is called blur-->
+      </form>
+      <script>
+        
+        let x = document.getElementById("myInput");
+
+        x.addEventListener("focus", myFocusFunction);
+        x.addEventListener("blur", myBlurFunction);
+        x.addEventListener("change", function(){
+          console.log(this.value); // will print the input in console ONLY WHEN the value is changed if you type remove and type the same it will not print.
+        });
+        x.addEventListener("input", function(){
+          console.log(this.value); // will print the input in console whenever there is a change even though it is same as before.
+        });
+
+        function myFocusFunction(){
+                 x.style.background = "yellow";
+        }
+        function myBlurFunction(){
+          x.style.background = "white";
+        }
+      </script>
+    </body>
+    
+
+  </head>
+</html>
